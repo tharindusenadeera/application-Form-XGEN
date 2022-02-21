@@ -33,12 +33,6 @@ const BasicBtn: FC<button_component_attributes_types> = ({ attributes }) => {
         size={attributes.size}
         startIcon={attributes.startIcon}
         variant={attributes.variant}
-        // textSizeSmall={attributes.textSizeSmall}
-        // textSizeMedium={attributes.textSizeMedium}
-        // textSizeLarge={attributes.textSizeLarge}
-        // iconSizeSmall={attributes.iconSizeSmall}
-        // iconSizeMedium={attributes.iconSizeMedium}
-        // iconSizeLarge={attributes.iconSizeLarge}
       >
         {attributes.title}
       </Button>
