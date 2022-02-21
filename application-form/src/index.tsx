@@ -4,11 +4,53 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ButtonComponent } from "./components/input-components/ButtonComponent";
+import AccessibilityIcon from "@mui/icons-material/Accessibility";
+
+const attributes = {
+  title: "hello",
+  color: "primary",
+  disabled: false,
+  fullWidth: true,
+  // href = { href },
+  size: "large",
+  variant: "contained",
+  styles: { width: "200px", background: "blue" },
+  onClick: () => alert("hello there simple button"),
+};
+const attributes2 = {
+  variant: "contained",
+  title: "new simple button",
+  onClick: () => alert("hello loading button"),
+};
+const attributes3 = {
+  variant: "contained",
+  title: "new simple button",
+  styles: { border: "1px solid grey", marginTop: "25px" },
+  children: <AccessibilityIcon />,
+  onClick: () => alert("hello icon button"),
+};
 
 ReactDOM.render(
   <React.StrictMode>
     <App>
-      <ButtonComponent />
+      {/* //simple btn */}
+      <ButtonComponent
+        loadingbtn={false}
+        iconbtn={false}
+        attributes={attributes}
+      />
+      {/* //loading btn */}
+      <ButtonComponent
+        loadingbtn={true}
+        iconbtn={false}
+        attributes={attributes2}
+      />
+      {/* //icon btn */}
+      <ButtonComponent
+        loadingbtn={false}
+        iconbtn={true}
+        attributes={attributes3}
+      />
     </App>
   </React.StrictMode>,
   document.getElementById("root")
