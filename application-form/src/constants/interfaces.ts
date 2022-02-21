@@ -23,3 +23,24 @@ export interface select_component_props_types {
 export interface MenuItem_component_props_types {
   values: any;
 }
+
+export interface checkbox_component_props_types {
+  checked?: any;
+  checkedIcon?: any;
+  classes?: any;
+  color?: any;
+  defaultChecked?: any;
+  disabled?: any;
+  disableRipple?: any;
+  icon?: any;
+  id?: any;
+  indeterminate?: any;
+  indeterminateIcon?: any;
+  inputProps?: any;
+  inputRef?: any;
+  onChange?: any;
+  required?: any;
+  size?: any;
+  sx?: any;
+  value?: any;
+}

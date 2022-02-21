@@ -5,12 +5,14 @@ import reportWebVitals from "./reportWebVitals";
 import { Buttons } from "./pages/buttons";
 import { TextBoxes } from "./pages/textBoxes";
 import { Select } from "./pages/select";
+import { Checkbox } from "./pages/checkbox";
 
 ReactDOM.render(
   <App>
     <Buttons />
     <TextBoxes />
     <Select />
+    <Checkbox />
   </App>,
 
   document.getElementById("root")
