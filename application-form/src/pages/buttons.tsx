@@ -8,7 +8,7 @@ const attributes = {
   size: "large",
   variant: "contained",
   onClick: () => alert("hello there simple button"),
-  styles: { width: window.innerWidth },
+  styles: { width: "300px" },
 };
 const attributes2 = {
   variant: "contained",

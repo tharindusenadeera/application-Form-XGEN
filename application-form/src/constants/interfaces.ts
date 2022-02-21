@@ -11,3 +11,15 @@ export interface button_component_attributes_types {
 export interface textbox_component_props_types {
   attributes: any;
 }
+
+export interface select_component_props_types {
+  values: any;
+  sx?: any;
+  label: any;
+  variant?: any;
+  error?: any;
+}
+
+export interface MenuItem_component_props_types {
+  values: any;
+}
