@@ -40,7 +40,7 @@ ReactDOM.render(
     <App>
       {/* //simple btn */}
       <ButtonComponent
-        loadingbtn={false}
+        // loadingbtn={false}
         iconbtn={false}
         attributes={attributes}
       />
