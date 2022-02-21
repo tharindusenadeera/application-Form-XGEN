@@ -6,6 +6,7 @@ import { Buttons } from "./pages/buttons";
 import { TextBoxes } from "./pages/textBoxes";
 import { Select } from "./pages/select";
 import { Checkbox } from "./pages/checkbox";
+import { Slider } from "./pages/slider";
 
 ReactDOM.render(
   <App>
@@ -13,6 +14,7 @@ ReactDOM.render(
     <TextBoxes />
     <Select />
     <Checkbox />
+    <Slider />
   </App>,
 
   document.getElementById("root")
