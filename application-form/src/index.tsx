@@ -26,6 +26,14 @@ const attributes3 = {
   children: <AccessibilityIcon />,
   onClick: () => alert("hello icon button"),
 };
+const attributes4 = {
+  variant: "contained",
+  title: "disabled",
+  disabled: true,
+  styles: { marginLeft: "15px" },
+  children: <AccessibilityIcon />,
+  onClick: () => alert("hello icon button"),
+};
 
 ReactDOM.render(
   <React.StrictMode>
@@ -47,6 +55,11 @@ ReactDOM.render(
         loadingbtn={false}
         iconbtn={true}
         attributes={attributes3}
+      />
+      <ButtonComponent
+        loadingbtn={false}
+        iconbtn={false}
+        attributes={attributes4}
       />
     </App>
   </React.StrictMode>,
