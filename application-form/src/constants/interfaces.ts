@@ -7,3 +7,7 @@ export interface button_Component_prpos_types {
 export interface button_component_attributes_types {
   attributes: any;
 }
+
+export interface textbox_component_props_types {
+  attributes: any;
+}
