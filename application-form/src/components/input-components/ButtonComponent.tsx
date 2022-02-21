@@ -61,7 +61,9 @@ const LoadingBtn: FC<button_component_attributes_types> = ({ attributes }) => {
 const IconBtn: FC<button_component_attributes_types> = ({ attributes }) => {
   return (
     <>
-      <IconButton>{attributes.children}</IconButton>
+      <IconButton style={attributes.styles} onClick={attributes.onClick}>
+        {attributes.children}
+      </IconButton>
     </>
   );
 };

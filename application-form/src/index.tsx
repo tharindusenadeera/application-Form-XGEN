@@ -22,7 +22,7 @@ const attributes2 = {
 const attributes3 = {
   variant: "contained",
   title: "new simple button",
-  styles: { border: "1px solid grey", marginTop: "25px" },
+  styles: { border: "1px solid grey", marginTop: "5px" },
   children: <AccessibilityIcon />,
   onClick: () => alert("hello icon button"),
 };
