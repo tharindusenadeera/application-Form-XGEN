@@ -10,11 +10,8 @@ const attributes = {
   title: "hello",
   color: "secondary",
   disabled: false,
-  fullWidth: true,
-  // href = { href },
   size: "large",
   variant: "contained",
-  styles: { width: "200px" },
   onClick: () => alert("hello there simple button"),
 };
 const attributes2 = {
