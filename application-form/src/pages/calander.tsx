@@ -4,7 +4,7 @@ import { DatePickerComponent } from "../components/input-components/DatePickerCo
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import { TextBoxComponent } from "../components/input-components/TextBoxComponent";
 import { TextField } from "@mui/material";
-
+import DatePicker from "@mui/lab/DatePicker";
 export const Calander = () => {
   const [value, setValue] = useState<Date | null>(null);
   return (
@@ -15,15 +15,21 @@ export const Calander = () => {
       <td>
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <DatePickerComponent
-            disableFuture
-            label="Responsive"
-            openTo="year"
-            views={["year", "month", "day"]}
+            label="Basic example"
             value={value}
             onChange={(newValue: any) => {
               setValue(newValue);
             }}
             renderInput={(params: any) => <TextField {...params} />}
+          />
+
+          <DatePicker
+            label="Basic example"
+            value={value}
+            onChange={(newValue) => {
+              setValue(newValue);
+            }}
+            renderInput={(params) => <TextField {...params} />}
           />
         </LocalizationProvider>
       </td>
