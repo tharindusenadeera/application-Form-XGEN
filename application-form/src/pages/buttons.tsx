@@ -33,31 +33,37 @@ const attributes4 = {
 
 export const Buttons = () => {
   return (
-    <div>
-      <h1>Buttons</h1>
-      {/* //simple btn */}
-      <ButtonComponent
-        loadingbtn={false}
-        iconbtn={false}
-        attributes={attributes}
-      />
-      {/* //loading btn */}
-      <ButtonComponent
-        loadingbtn={true}
-        iconbtn={false}
-        attributes={attributes2}
-      />
-      {/* //icon btn */}
-      <ButtonComponent
-        loadingbtn={false}
-        iconbtn={true}
-        attributes={attributes3}
-      />
-      <ButtonComponent
-        loadingbtn={false}
-        iconbtn={false}
-        attributes={attributes4}
-      />
-    </div>
+    <>
+      <td className="elementName">
+        <h3>Buttons</h3>
+      </td>
+
+      <td>
+        {" "}
+        {/* //simple btn */}
+        <ButtonComponent
+          loadingbtn={false}
+          iconbtn={false}
+          attributes={attributes}
+        />
+        {/* //loading btn */}
+        <ButtonComponent
+          loadingbtn={true}
+          iconbtn={false}
+          attributes={attributes2}
+        />
+        {/* //icon btn */}
+        <ButtonComponent
+          loadingbtn={false}
+          iconbtn={true}
+          attributes={attributes3}
+        />
+        <ButtonComponent
+          loadingbtn={false}
+          iconbtn={false}
+          attributes={attributes4}
+        />
+      </td>
+    </>
   );
 };

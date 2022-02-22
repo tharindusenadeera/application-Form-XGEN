@@ -15,6 +15,11 @@ const marks = [
     label: "37°C",
   },
   {
+    value: 67,
+    label: "67°C",
+  },
+
+  {
     value: 100,
     label: "100°C",
   },
@@ -26,22 +31,25 @@ const valuetext = (value: any) => {
 
 export const Slider = () => {
   return (
-    <div>
-      <h1>Slider</h1>
-
-      <SliderComponent
-        aria-label="Always visible"
-        sx={{ width: "400px" }}
-        defaultValue={80}
-        getAriaValueText={valuetext}
-        step={10}
-        marks={marks}
-        valueLabelDisplay="on"
-        color="secondary"
-      />
-      <br />
-      <SliderComponent sx={{ width: "300px" }} />
-      <br />
-    </div>
+    <>
+      <td className="elementName">
+        <h3>Slider</h3>
+      </td>
+      <td>
+        <SliderComponent
+          aria-label="Always visible"
+          sx={{ width: "400px" }}
+          defaultValue={80}
+          getAriaValueText={valuetext}
+          step={10}
+          marks={marks}
+          valueLabelDisplay="on"
+          color="secondary"
+        />
+        <br />
+        <SliderComponent sx={{ width: "300px" }} />
+        <br />
+      </td>
+    </>
   );
 };

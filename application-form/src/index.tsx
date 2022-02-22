@@ -7,14 +7,44 @@ import { TextBoxes } from "./pages/textBoxes";
 import { Select } from "./pages/select";
 import { Checkbox } from "./pages/checkbox";
 import { Slider } from "./pages/slider";
+import { Radio } from "./pages/radio";
+import { Calander } from "./pages/calander";
 
 ReactDOM.render(
   <App>
-    <Buttons />
-    <TextBoxes />
-    <Select />
-    <Checkbox />
-    <Slider />
+    <h1>Form Basic Elements</h1>
+    <hr />
+    <table style={{ marginLeft: "130px", marginTop: "50px" }}>
+      <tr>
+        <th>
+          <h1>Element</h1>
+        </th>
+        <th className="elementName">
+          <h1>Demo</h1>
+        </th>
+      </tr>
+      <tr>
+        <Buttons />
+      </tr>
+      <tr>
+        <TextBoxes />
+      </tr>
+      <tr>
+        <Select />
+      </tr>
+      <tr>
+        <Checkbox />
+      </tr>
+      <tr>
+        <Slider />
+      </tr>
+      <tr>
+        <Radio />
+      </tr>
+      <tr>
+        <Calander />
+      </tr>
+    </table>
   </App>,
 
   document.getElementById("root")

@@ -4,11 +4,18 @@ import { ChechBoxComponent } from "../components/input-components/ChechBoxCompon
 
 export const Checkbox = () => {
   return (
-    <div>
-      <h1>Check boxses</h1>
-      <ChechBoxComponent defaultChecked={true} />
-      <ChechBoxComponent icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
-      <ChechBoxComponent color="success" />
-    </div>
+    <>
+      <td className="elementName">
+        <h3>Check boxses</h3>
+      </td>
+      <td>
+        <ChechBoxComponent defaultChecked={true} />
+        <ChechBoxComponent
+          icon={<FavoriteBorder />}
+          checkedIcon={<Favorite />}
+        />
+        <ChechBoxComponent color="success" />
+      </td>
+    </>
   );
 };
