@@ -1,35 +1,5 @@
-import AccessibilityIcon from "@mui/icons-material/Accessibility";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { ButtonComponent } from "../components/input-components/ButtonComponent";
-
-const attributes = {
-  title: "hello",
-  color: "secondary",
-  disabled: false,
-  size: "large",
-  variant: "contained",
-  onClick: () => alert("hello there simple button"),
-  styles: { width: "300px" },
-};
-const attributes2 = {
-  variant: "contained",
-  title: "new simple button",
-  onClick: () => alert("hello loading button"),
-};
-const attributes3 = {
-  variant: "contained",
-  title: "new simple button",
-  styles: { border: "1px solid grey", marginTop: "5px" },
-  children: <AccessibilityIcon />,
-  onClick: () => alert("hello icon button"),
-};
-const attributes4 = {
-  variant: "contained",
-  title: "disabled",
-  disabled: true,
-  styles: { marginLeft: "15px" },
-  children: <AccessibilityIcon />,
-  onClick: () => alert("hello icon button"),
-};
 
 export const Buttons = () => {
   return (
@@ -44,24 +14,33 @@ export const Buttons = () => {
         <ButtonComponent
           loadingbtn={false}
           iconbtn={false}
-          attributes={attributes}
+          title="Click Me"
+          color="secondary"
+          size="large"
+          variant="contained"
+          onClick={() => alert("hello there simple button")}
+          style={{ width: "300px" }}
         />
         {/* //loading btn */}
         <ButtonComponent
-          loadingbtn={true}
-          iconbtn={false}
-          attributes={attributes2}
+          loadingbtn
+          loading
+          onClick={() => alert("hello loading button")}
         />
         {/* //icon btn */}
         <ButtonComponent
-          loadingbtn={false}
-          iconbtn={true}
-          attributes={attributes3}
+          iconbtn
+          sx={{ border: "1px solid grey", marginTop: "5px" }}
+          children={<CloudUploadIcon />}
+          onClick={() => alert("UPLOADING....")}
+          size="large"
         />
+        {/* //disabled button */}
         <ButtonComponent
-          loadingbtn={false}
-          iconbtn={false}
-          attributes={attributes4}
+          variant="contained"
+          title="disabled"
+          disabled={true}
+          style={{ marginLeft: "15px" }}
         />
       </td>
     </>

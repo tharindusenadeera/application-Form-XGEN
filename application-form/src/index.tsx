@@ -15,6 +15,7 @@ import { Togglebutton } from "./pages/togglebutton";
 import { Avatar } from "./pages/avatar";
 import { Skelton } from "./pages/skelton";
 import { Progress } from "./pages/Progress";
+import { MessageBox } from "./pages/messagebox";
 
 ReactDOM.render(
   <App>
@@ -67,6 +68,9 @@ ReactDOM.render(
       </tr>
       <tr>
         <Progress />
+      </tr>
+      <tr>
+        <MessageBox />
       </tr>
     </table>
   </App>,

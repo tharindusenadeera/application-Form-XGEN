@@ -1,7 +1,26 @@
 export interface button_Component_prpos_types {
+  autoFocus?: any;
   loadingbtn?: any;
+  Children?: any;
   iconbtn?: any;
+  style?: any;
+  onClick?: any;
+  color?: any;
+  classes?: any;
+  disableFocusRipple?: any;
+  disableRipple?: any;
+  edge?: any;
+  disabled?: any;
+  endIcon?: any;
+  fullWidth?: any;
+  href?: any;
+  size?: any;
+  startIcon?: any;
+  variant?: any;
   attributes?: any;
+  title?: any;
+  sx?: any;
+  loading?: any;
 }
 
 export interface button_component_attributes_types {
@@ -408,4 +427,64 @@ export interface linearProgressComponent_component_props_types {
   value?: any;
   valueBuffer?: any;
   variant?: any;
+}
+
+export interface dialog_component_props_types {
+  open?: any;
+  ariaDescribedby?: any;
+  ariaLabelledby?: any;
+  BackdropComponent?: any;
+  children?: any;
+  classes?: any;
+  disableEscapeKeyDown?: any;
+  fullScreen?: any;
+  fullWidth?: any;
+  maxWidth?: any;
+  onBackdropClick?: any;
+  onClose?: any;
+  PaperComponent?: any;
+  PaperProps?: any;
+  scroll?: any;
+  sx?: any;
+  TransitionComponent?: any;
+  transitionDuration?: any;
+  TransitionProps?: any;
+}
+
+export interface dialogaction_component_props_types {
+  children?: any;
+  classes?: any;
+  disableSpacing?: any;
+  sx?: any;
+  onClose?: any;
+}
+
+export interface dialogcontent_component_props_types {
+  children?: any;
+  classes?: any;
+  dividers?: any;
+  sx?: any;
+}
+
+export interface dialogcontenttext_component_props_types {
+  children?: any;
+  classes?: any;
+  dividers?: any;
+  sx?: any;
+  id?: any;
+}
+
+export interface dialogtitle_component_props_types {
+  children?: any;
+  classes?: any;
+  dividers?: any;
+  sx?: any;
+  id?: any;
+}
+
+export interface messagebox_component_props_types {
+  children?: any;
+  title?: any;
+  message?: any;
+  onClose?: any;
 }
