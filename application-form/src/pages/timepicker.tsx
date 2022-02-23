@@ -1,0 +1,37 @@
+import { useState } from "react";
+import { TextBoxComponent } from "../components/input-components/TextBoxComponent";
+import { TimePickerComponent } from "../components/input-components/TimePickerComponent";
+
+const attributes4 = { variant: "outlined", error: true, helperText: "error" };
+
+export const Timepicker = () => {
+  const [value, setValue] = useState<Date | null>(null);
+
+  return (
+    <>
+      <td className="elementName">
+        <h3>Time Picker</h3>
+      </td>
+      <td>
+        <TimePickerComponent
+          label="Basic example"
+          value={value}
+          onChange={(newValue: any) => {
+            setValue(newValue);
+          }}
+          renderInput={(params: any) => <TextBoxComponent {...params} />}
+        />
+        <TimePickerComponent
+          label="Basic example"
+          value={value}
+          onChange={(newValue: any) => {
+            setValue(newValue);
+          }}
+          renderInput={(params: any) => (
+            <TextBoxComponent variant="outlined" {...params} />
+          )}
+        />
+      </td>
+    </>
+  );
+};

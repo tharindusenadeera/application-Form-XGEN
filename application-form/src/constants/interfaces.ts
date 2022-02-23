@@ -96,6 +96,7 @@ export interface radiobutton_component_props_types {
   value?: any;
   name?: any;
 }
+
 export interface checkbox_component_props_types {
   checked?: any;
   checkedIcon?: any;
@@ -147,6 +148,7 @@ export interface slider_component_props_types {
   valueLabelDisplay?: any;
   valueLabelFormat?: any;
 }
+
 export interface formcontrol_component_props_types {
   children?: any;
   classes?: any;
@@ -162,6 +164,7 @@ export interface formcontrol_component_props_types {
   focused?: any;
   margin?: any;
 }
+
 export interface formcontrollabel_component_props_types {
   control?: any;
   checked?: any;
@@ -176,6 +179,7 @@ export interface formcontrollabel_component_props_types {
   label?: any;
   value?: any;
 }
+
 export interface formlabel_component_props_types {
   children?: any;
   classes?: any;
@@ -189,6 +193,7 @@ export interface formlabel_component_props_types {
   sx?: any;
   id?: any;
 }
+
 export interface radiogroup_component_props_types {
   children?: any;
   defaultValue?: any;
@@ -196,6 +201,57 @@ export interface radiogroup_component_props_types {
   onChange?: any;
   value?: any;
 }
+
+export interface rLocalizationProviderComponent_component_props_types {
+  children?: any;
+}
+
+export interface TimePickerComponent_component_props_types {
+  onChange?: any;
+  renderInput?: any;
+  acceptRegex?: any;
+  ampm?: any;
+  ampmInClock?: any;
+  cancelText?: any;
+  clearable?: any;
+  clearText?: any;
+  components?: any;
+  desktopModeMediaQuery?: any;
+  DialogProps?: any;
+  disableCloseOnSelect?: any;
+  disabled?: any;
+  disableIgnoringDatePartForTimeValidation?: any;
+  disableMaskedInput?: any;
+  disableOpenPicker?: any;
+  getClockLabelText?: any;
+  getOpenDialogAriaText?: any;
+  InputAdornmentProps?: any;
+  inputFormat?: any;
+  inputRef?: any;
+  maxTime?: any;
+  minTime?: any;
+  minutesStep?: any;
+  okText?: any;
+  onAccept?: any;
+  onClose?: any;
+  onError?: any;
+  onOpen?: any;
+  onViewChange?: any;
+  open?: any;
+  OpenPickerButtonProps?: any;
+  openTo?: any;
+  orientation?: any;
+  PaperProps?: any;
+  readOnly?: any;
+  rifmFormatter?: any;
+  showTodayButton?: any;
+  todayText?: any;
+  toolbarFormat?: any;
+  toolbarPlaceholder?: any;
+  value?: any;
+  label?: any;
+}
+
 export interface calander_component_props_types {
   onChange?: any;
   renderInput?: any;
@@ -260,4 +316,24 @@ export interface calander_component_props_types {
   views?: any;
   label?: any;
   disableFuture?: any;
+}
+
+export interface switchcomponent_component_props_types {
+  checked?: any;
+  checkedIcon?: any;
+  classes?: any;
+  color?: any;
+  defaultChecked?: any;
+  disabled?: any;
+  disableRipple?: any;
+  edge?: any;
+  icon?: any;
+  id?: any;
+  inputProps?: any;
+  inputRef?: any;
+  onChange?: any;
+  required?: any;
+  size?: any;
+  sx?: any;
+  value?: any;
 }

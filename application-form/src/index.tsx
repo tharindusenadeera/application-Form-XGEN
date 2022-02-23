@@ -8,7 +8,9 @@ import { Select } from "./pages/select";
 import { Checkbox } from "./pages/checkbox";
 import { Slider } from "./pages/slider";
 import { Radio } from "./pages/radio";
-import { Calander } from "./pages/calander";
+import { Datepicker } from "./pages/calander";
+import { Timepicker } from "./pages/timepicker";
+import { Switch } from "./pages/switch";
 
 ReactDOM.render(
   <App>
@@ -42,7 +44,13 @@ ReactDOM.render(
         <Radio />
       </tr>
       <tr>
-        <Calander />
+        <Datepicker />
+      </tr>
+      <tr>
+        <Timepicker />
+      </tr>
+      <tr>
+        <Switch />
       </tr>
     </table>
   </App>,
