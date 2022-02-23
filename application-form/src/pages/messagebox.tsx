@@ -9,7 +9,7 @@ export const MessageBox: FC<messagebox_component_props_types> = (props) => {
   return (
     <>
       <td className="elementName">
-        <h3>Message Box</h3>
+        <h3>Alert Box</h3>
       </td>
       <td>
         <MessageBoxComponent
