@@ -337,3 +337,75 @@ export interface switchcomponent_component_props_types {
   sx?: any;
   value?: any;
 }
+
+export interface ToggleButtonGroupComponent_component_props_types {
+  children?: any;
+  classes?: any;
+  color?: any;
+  disabled?: any;
+  exclusive?: any;
+  onChange?: any;
+  orientation?: any;
+  size?: any;
+  sx?: any;
+  value?: any;
+}
+
+export interface ToggleButtonComponent_component_props_types {
+  value?: any;
+  children?: any;
+  classes?: any;
+  color?: any;
+  disabled?: any;
+  disableFocusRipple?: any;
+  fullWidth?: any;
+  onChange?: any;
+  onClick?: any;
+  selected?: any;
+  size?: any;
+  sx?: any;
+}
+
+export interface avatar_component_props_types {
+  alt?: any;
+  children?: any;
+  classes?: any;
+  component?: any;
+  imgProps?: any;
+  sizes?: any;
+  srcSet?: any;
+  sx?: any;
+  src?: any;
+  variant?: any;
+}
+
+export interface skeleton_component_props_types {
+  animation?: any;
+  children?: any;
+  classes?: any;
+  component?: any;
+  height?: any;
+  sx?: any;
+  variant?: any;
+  width?: any;
+}
+
+export interface circularProgressComponent_component_props_types {
+  classes?: any;
+  color?: any;
+  disableShrink?: any;
+  size?: any;
+  sx?: any;
+  thickness?: any;
+  value?: any;
+  variant?: any;
+}
+
+export interface linearProgressComponent_component_props_types {
+  classes?: any;
+  color?: any;
+  sx?: any;
+  value?: any;
+  valueBuffer?: any;
+  variant?: any;
+}

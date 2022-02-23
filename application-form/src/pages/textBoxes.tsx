@@ -26,15 +26,10 @@ export const TextBoxes = () => {
         />
         <TextBoxComponent
           id="input-with-icon-textfield"
-          label="TextField"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <AccountCircle />
-              </InputAdornment>
-            ),
-          }}
-          variant="standard"
+          label="Text Area"
+          variant="outlined"
+          multiline
+          rows={4}
         />
       </td>
     </>

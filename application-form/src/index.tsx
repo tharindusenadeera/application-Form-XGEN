@@ -11,6 +11,10 @@ import { Radio } from "./pages/radio";
 import { Datepicker } from "./pages/calander";
 import { Timepicker } from "./pages/timepicker";
 import { Switch } from "./pages/switch";
+import { Togglebutton } from "./pages/togglebutton";
+import { Avatar } from "./pages/avatar";
+import { Skelton } from "./pages/skelton";
+import { Progress } from "./pages/Progress";
 
 ReactDOM.render(
   <App>
@@ -51,6 +55,18 @@ ReactDOM.render(
       </tr>
       <tr>
         <Timepicker />
+      </tr>
+      <tr>
+        <Togglebutton />
+      </tr>
+      <tr>
+        <Avatar />
+      </tr>
+      <tr>
+        <Skelton />
+      </tr>
+      <tr>
+        <Progress />
       </tr>
     </table>
   </App>,
