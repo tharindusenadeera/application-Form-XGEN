@@ -44,13 +44,13 @@ ReactDOM.render(
         <Radio />
       </tr>
       <tr>
+        <Switch />
+      </tr>
+      <tr>
         <Datepicker />
       </tr>
       <tr>
         <Timepicker />
-      </tr>
-      <tr>
-        <Switch />
       </tr>
     </table>
   </App>,

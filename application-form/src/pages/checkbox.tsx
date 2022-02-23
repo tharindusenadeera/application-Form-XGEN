@@ -6,7 +6,7 @@ export const Checkbox = () => {
   return (
     <>
       <td className="elementName">
-        <h3>Check boxs</h3>
+        <h3>Checkboxes</h3>
       </td>
       <td>
         <ChechBoxComponent defaultChecked={true} />

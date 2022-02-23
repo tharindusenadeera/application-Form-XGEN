@@ -7,7 +7,7 @@ export const Switch = () => {
   return (
     <>
       <td className="elementName">
-        <h3>Time Picker</h3>
+        <h3>Switch</h3>
       </td>
       <td>
         <FormControlLabelComponent
