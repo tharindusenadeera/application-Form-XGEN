@@ -43,18 +43,23 @@ export const DependancyTesting: FC = () => {
         {!value ? (
           <>
             <FormControlComponent>
-              <SelectComponents
-                label="Country"
-                values={[
-                  { value: 1, name: "USA" },
-                  { value: 2, name: "UK" },
-                  { value: 2, name: "JAPAN" },
-                ]}
-                variant="outlined"
-                value={country}
-                onChange={handleCountryChange}
-                autoWidth
-                sx={{ minWidth: "200px" }}
+              <FormLabelComponent
+                children={
+                  <SelectComponents
+                    label="Country"
+                    values={[
+                      { value: 1, name: "USA" },
+                      { value: 2, name: "UK" },
+                      { value: 2, name: "JAPAN" },
+                    ]}
+                    variant="filled"
+                    value={country}
+                    onChange={handleCountryChange}
+                    autoWidth
+                    sx={{ minWidth: "200px" }}
+                  />
+                }
+                required
               />
             </FormControlComponent>
           </>
