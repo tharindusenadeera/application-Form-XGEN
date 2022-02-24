@@ -12,9 +12,7 @@ export const MultipleValuesInput: FC = () => {
   const [values, setValues] = useState([{ type: null, value: "", id: "" }]);
   const [type, setType] = useState("");
 
-  const handleCountryChange = (event: any) => setType(event.target.value);
-
-  const onValueChange = (value: any, type: any, id: any, index: any) => {
+  const onValueChange = (value: any, type: any, id: any) => {
     let filterd = values.map((item) => {
       if (item.id == id) {
         return { type: type, value: value, id: id };
@@ -26,7 +24,7 @@ export const MultipleValuesInput: FC = () => {
     setValues(filterd);
   };
 
-  const onValueChangeX = (type: any, value: any, id: any, index: any) => {
+  const onValueChangeX = (type: any, value: any, id: any) => {
     let filterd = values.map((item) => {
       if (item.id == id) {
         return { type: type, value: value, id: id };
@@ -82,7 +80,7 @@ export const MultipleValuesInput: FC = () => {
               variant="outlined"
               value={item.type}
               onChange={(e: any) =>
-                onValueChangeX(e.target.value, item.type, item.id, index)
+                onValueChange(item.value, e.target.value, item.id)
               }
               autoWidth
               sx={{ minWidth: "200px" }}
@@ -91,7 +89,7 @@ export const MultipleValuesInput: FC = () => {
               value={item.value}
               variant="outlined"
               onChange={(e: any) =>
-                onValueChange(e.target.value, item.type, item.id, index)
+                onValueChange(e.target.value, item.type, item.id)
               }
             />
             {index != 0 && (
