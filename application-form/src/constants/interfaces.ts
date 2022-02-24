@@ -64,11 +64,32 @@ export interface textbox_component_props_types {
 }
 
 export interface select_component_props_types {
-  values: any;
-  sx?: any;
-  label: any;
-  variant?: any;
+  autoWidth?: any;
+  children?: any;
+  classes?: any;
   error?: any;
+  defaultOpen?: any;
+  defaultValue?: any;
+  displayEmpty?: any;
+  IconComponent?: any;
+  id?: any;
+  input?: any;
+  inputProps?: any;
+  label?: any;
+  labelId?: any;
+  MenuProps?: any;
+  multiple?: any;
+  native?: any;
+  onChange?: any;
+  onClose?: any;
+  onOpen?: any;
+  open?: any;
+  renderValue?: any;
+  SelectDisplayProps?: any;
+  sx?: any;
+  value?: any;
+  variant?: any;
+  values?: any;
 }
 
 export interface MenuItem_component_props_types {

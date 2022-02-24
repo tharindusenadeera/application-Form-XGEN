@@ -24,7 +24,7 @@ export const ToggleButtonComponent: FC<
         value={value}
         children={children}
         classes={classes}
-        color={color}
+        color="primary"
         disabled={disabled}
         disableFocusRipple={disableFocusRipple}
         fullWidth={fullWidth}

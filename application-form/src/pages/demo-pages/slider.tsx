@@ -1,5 +1,5 @@
 import React from "react";
-import { SliderComponent } from "../components/input-components/SliderComponent";
+import { SliderComponent } from "../../components/inputComponents/SliderComponent";
 
 const marks = [
   {

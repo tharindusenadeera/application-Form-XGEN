@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import { SkeletonComponent } from "../components/input-components/SkeletonComponent";
+import { SkeletonComponent } from "../../components/inputComponents/SkeletonComponent";
 
 export const Skelton = () => {
   const label = { inputProps: { "aria-label": "Switch demo" } };

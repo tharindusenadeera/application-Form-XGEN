@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { TextBoxComponent } from "../components/input-components/TextBoxComponent";
-import { TimePickerComponent } from "../components/input-components/TimePickerComponent";
+import { TextBoxComponent } from "../../components/inputComponents/TextBoxComponent";
+import { TimePickerComponent } from "../../components/inputComponents/TimePickerComponent";
 
 const attributes4 = { variant: "outlined", error: true, helperText: "error" };
 

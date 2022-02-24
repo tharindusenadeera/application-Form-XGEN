@@ -3,8 +3,8 @@ import { Box, Typography } from "@mui/material";
 import {
   CircularProgressComponent,
   LinearProgressComponent,
-} from "../components/input-components/ProgressComponent";
-import { SkeletonComponent } from "../components/input-components/SkeletonComponent";
+} from "../../components/inputComponents/ProgressComponent";
+import { SkeletonComponent } from "../../components/inputComponents/SkeletonComponent";
 
 export const Progress = () => {
   const [progress, setProgress] = useState(10);

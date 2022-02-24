@@ -1,5 +1,5 @@
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import { ButtonComponent } from "../components/input-components/ButtonComponent";
+import { ButtonComponent } from "../../components/inputComponents/ButtonComponent";
 
 export const Buttons = () => {
   return (

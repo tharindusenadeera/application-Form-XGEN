@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import { DatePickerComponent } from "../components/input-components/DatePickerComponent";
+import { DatePickerComponent } from "../../components/inputComponents/DatePickerComponent";
 import DatePicker from "@mui/lab/DatePicker";
-import { LocalizationProviderComponent } from "../components/input-components/LocalizationProviderComponent";
-import { TextBoxComponent } from "../components/input-components/TextBoxComponent";
+import { LocalizationProviderComponent } from "../../components/inputComponents/LocalizationProviderComponent";
+import { TextBoxComponent } from "../../components/inputComponents/TextBoxComponent";
 
 export const Datepicker = () => {
   const [value, setValue] = useState<Date | null>(null);

@@ -1,4 +1,4 @@
-import { SelectComponents } from "../components/input-components/SelectComponents";
+import { SelectComponents } from "../../components/inputComponents/SelectComponents";
 
 export const Select = () => {
   return (

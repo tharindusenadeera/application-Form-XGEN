@@ -1,6 +1,6 @@
 import { AccountCircle } from "@mui/icons-material";
 import { InputAdornment } from "@mui/material";
-import { TextBoxComponent } from "../components/input-components/TextBoxComponent";
+import { TextBoxComponent } from "../../components/inputComponents/TextBoxComponent";
 
 const attributes4 = { variant: "outlined", error: true, helperText: "error" };
 

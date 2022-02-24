@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { ButtonComponent } from "../components/input-components/ButtonComponent";
-import { MessageBoxComponent } from "../components/input-components/MessageBoxComponent";
-import { messagebox_component_props_types } from "../constants/interfaces";
+import { ButtonComponent } from "../../components/inputComponents/ButtonComponent";
+import { MessageBoxComponent } from "../../components/inputComponents/MessageBoxComponent";
+import { messagebox_component_props_types } from "../../constants/interfaces";
 
 export const MessageBox: FC<messagebox_component_props_types> = (props) => {
   console.log(props);

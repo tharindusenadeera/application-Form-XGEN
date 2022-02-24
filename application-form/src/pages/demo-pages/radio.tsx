@@ -1,9 +1,9 @@
 import React from "react";
-import { FormControlComponent } from "../components/input-components/FormControlComponent";
-import { FormControlLabelComponent } from "../components/input-components/FormControlLabelComponent";
-import { FormLabelComponent } from "../components/input-components/FormLabelComponent";
-import { RadioButtonComponent } from "../components/input-components/RadioButtonComponent";
-import { RadioGropComponent } from "../components/input-components/RadioGropComponent";
+import { FormControlComponent } from "../../components/inputComponents/FormControlComponent";
+import { FormControlLabelComponent } from "../../components/inputComponents/FormControlLabelComponent";
+import { FormLabelComponent } from "../../components/inputComponents/FormLabelComponent";
+import { RadioButtonComponent } from "../../components/inputComponents/RadioButtonComponent";
+import { RadioGropComponent } from "../../components/inputComponents/RadioGropComponent";
 
 export const Radio = () => {
   return (

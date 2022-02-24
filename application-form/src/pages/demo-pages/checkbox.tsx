@@ -1,6 +1,6 @@
 import React from "react";
 import { Favorite, FavoriteBorder } from "@mui/icons-material";
-import { ChechBoxComponent } from "../components/input-components/ChechBoxComponent";
+import { ChechBoxComponent } from "../../components/inputComponents/ChechBoxComponent";
 
 export const Checkbox = () => {
   return (

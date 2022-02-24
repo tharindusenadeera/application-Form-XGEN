@@ -1,6 +1,6 @@
-import { FormControlComponent } from "../components/input-components/FormControlComponent";
-import { FormControlLabelComponent } from "../components/input-components/FormControlLabelComponent";
-import { SwitchComponent } from "../components/input-components/SwitchComponent";
+import { FormControlComponent } from "../../components/inputComponents/FormControlComponent";
+import { FormControlLabelComponent } from "../../components/inputComponents/FormControlLabelComponent";
+import { SwitchComponent } from "../../components/inputComponents/SwitchComponent";
 
 export const Switch = () => {
   const label = { inputProps: { "aria-label": "Switch demo" } };

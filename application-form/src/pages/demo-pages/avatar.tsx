@@ -1,4 +1,4 @@
-import { AvatarComponent } from "../components/input-components/AvatarComponent";
+import { AvatarComponent } from "../../components/inputComponents/AvatarComponent";
 import Stack from "@mui/material/Stack";
 import { deepOrange, deepPurple } from "@mui/material/colors";
 

@@ -7,8 +7,8 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 import ViewQuiltIcon from "@mui/icons-material/ViewQuilt";
-import { ToggleButtonGroupComponent } from "../components/input-components/ToggleButtonGroupComponent";
-import { ToggleButtonComponent } from "../components/input-components/ToggleButtonComponent";
+import { ToggleButtonGroupComponent } from "../../components/inputComponents/ToggleButtonGroupComponent";
+import { ToggleButtonComponent } from "../../components/inputComponents/ToggleButtonComponent";
 
 export const Togglebutton = () => {
   const [formats, setFormats] = useState(() => ["bold", "italic"]);
