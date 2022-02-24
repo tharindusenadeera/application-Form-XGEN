@@ -9,23 +9,40 @@ import AddIcon from "@mui/icons-material/Add";
 import { v4 as uuidv4 } from "uuid";
 
 export const MultipleValuesInput: FC = () => {
-  const [values, setValues] = useState([{ type: null, value: null, id: "" }]);
+  const [values, setValues] = useState([{ type: null, value: "", id: "" }]);
   const [type, setType] = useState("");
 
   const handleCountryChange = (event: any) => setType(event.target.value);
 
-  const onValueChange = (value: any, id: any, type: any) => {
-    // setValues(() => {
-    //   let filterd = values.filter((item) => item.id != id);
-    //   let n = [...filterd, { value, type, id }];
-    // });
+  const onValueChange = (value: any, type: any, id: any, index: any) => {
+    let filterd = values.map((item) => {
+      if (item.id == id) {
+        return { type: type, value: value, id: id };
+      }
+      return item;
+    });
+    console.log(filterd);
+
+    setValues(filterd);
+  };
+
+  const onValueChangeX = (type: any, value: any, id: any, index: any) => {
+    let filterd = values.map((item) => {
+      if (item.id == id) {
+        return { type: type, value: value, id: id };
+      }
+      return item;
+    });
+    console.log(filterd);
+
+    setValues(filterd);
   };
 
   const onNewFieldAdding = () => {
     const newId = uuidv4();
     setValues((curruntValues) => [
       ...curruntValues,
-      { type: null, value: null, id: newId },
+      { type: null, value: "", id: newId },
     ]);
   };
 
@@ -40,12 +57,14 @@ export const MultipleValuesInput: FC = () => {
       <br />
       <br />
 
-      <ButtonComponent
-        iconbtn
-        children={<AddIcon />}
-        sx={{ border: "1px solid grey" }}
-        onClick={onNewFieldAdding}
-      />
+      {values[0].value != "" && (
+        <ButtonComponent
+          iconbtn
+          children={<AddIcon />}
+          sx={{ border: "1px solid grey" }}
+          onClick={onNewFieldAdding}
+        />
+      )}
       <br />
       <br />
       <FormLabelComponent>Customer contact details</FormLabelComponent>
@@ -53,7 +72,7 @@ export const MultipleValuesInput: FC = () => {
         return (
           <Stack direction="row" spacing={2} m={2}>
             <SelectComponents
-              label="type"
+              label={item.type}
               values={[
                 { value: null, name: "None" },
                 { value: "mobile", name: "Mobile" },
@@ -62,7 +81,9 @@ export const MultipleValuesInput: FC = () => {
               ]}
               variant="outlined"
               value={item.type}
-              onChange={handleCountryChange}
+              onChange={(e: any) =>
+                onValueChangeX(e.target.value, item.type, item.id, index)
+              }
               autoWidth
               sx={{ minWidth: "200px" }}
             />
@@ -70,7 +91,7 @@ export const MultipleValuesInput: FC = () => {
               value={item.value}
               variant="outlined"
               onChange={(e: any) =>
-                onValueChange(e.target.value, item.type, item.id)
+                onValueChange(e.target.value, item.type, item.id, index)
               }
             />
             {index != 0 && (
