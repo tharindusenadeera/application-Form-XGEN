@@ -10,21 +10,8 @@ import { v4 as uuidv4 } from "uuid";
 
 export const MultipleValuesInput: FC = () => {
   const [values, setValues] = useState([{ type: null, value: "", id: "" }]);
-  const [type, setType] = useState("");
 
   const onValueChange = (value: any, type: any, id: any) => {
-    let filterd = values.map((item) => {
-      if (item.id == id) {
-        return { type: type, value: value, id: id };
-      }
-      return item;
-    });
-    console.log(filterd);
-
-    setValues(filterd);
-  };
-
-  const onValueChangeX = (type: any, value: any, id: any) => {
     let filterd = values.map((item) => {
       if (item.id == id) {
         return { type: type, value: value, id: id };
@@ -55,7 +42,7 @@ export const MultipleValuesInput: FC = () => {
       <br />
       <br />
 
-      {values[0].value != "" && (
+      {values[values.length - 1].value != "" && (
         <ButtonComponent
           iconbtn
           children={<AddIcon />}

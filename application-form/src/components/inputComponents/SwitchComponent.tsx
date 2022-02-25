@@ -25,14 +25,14 @@ export const SwitchComponent: FC<switchcomponent_component_props_types> = ({
     <>
       <Switch
         checked={checked}
-        checkedIcon={checkedIcon}
+        // checkedIcon={checkedIcon}
         classes={classes}
         color={color}
         defaultChecked={defaultChecked}
         disabled={disabled}
         disableRipple={disableRipple}
         edge={edge}
-        icon={icon}
+        // icon={icon}
         id={id}
         inputProps={inputProps}
         inputRef={inputRef}
