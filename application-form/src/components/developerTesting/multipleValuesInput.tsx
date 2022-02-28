@@ -7,6 +7,12 @@ import { ButtonComponent } from "../inputComponents/ButtonComponent";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
 import { v4 as uuidv4 } from "uuid";
+import {
+  basicSelect,
+  borderdIconButton,
+  devCollapsed,
+  devUnCollapsed,
+} from "../../styles";
 
 export const MultipleValuesInput: FC = () => {
   const [values, setValues] = useState([{ type: null, value: "", id: "" }]);
@@ -36,9 +42,11 @@ export const MultipleValuesInput: FC = () => {
     setValues(() => values.filter((item) => item.id != id));
   };
 
+  const onReset = () => setValues([{ type: null, value: "", id: "" }]);
+
   return (
     <Paper>
-      <div style={{ height: collapse ? "60px" : "auto", overflow: "hidden" }}>
+      <div style={collapse ? devCollapsed : devUnCollapsed}>
         <Typography variant="h5" p={1} onClick={() => setCollapse(!collapse)}>
           Multiple Values Input
         </Typography>
@@ -49,7 +57,7 @@ export const MultipleValuesInput: FC = () => {
           <ButtonComponent
             iconbtn
             children={<AddIcon />}
-            sx={{ border: "1px solid grey" }}
+            sx={borderdIconButton}
             onClick={onNewFieldAdding}
           />
         )}
@@ -73,7 +81,7 @@ export const MultipleValuesInput: FC = () => {
                   onValueChange(item.value, e.target.value, item.id)
                 }
                 autoWidth
-                sx={{ minWidth: "200px" }}
+                sx={basicSelect}
               />
               <TextBoxComponent
                 value={item.value}
@@ -92,6 +100,8 @@ export const MultipleValuesInput: FC = () => {
             </Stack>
           );
         })}
+        <br />
+        <ButtonComponent title="reset" onClick={onReset} />
       </div>
     </Paper>
   );

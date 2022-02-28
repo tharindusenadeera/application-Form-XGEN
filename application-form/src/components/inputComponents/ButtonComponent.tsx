@@ -27,6 +27,7 @@ export const ButtonComponent: FC<button_Component_prpos_types> = ({
   autoFocus,
   loading,
   sx,
+  className,
 }) => {
   if (iconbtn == true)
     return (
@@ -42,6 +43,7 @@ export const ButtonComponent: FC<button_Component_prpos_types> = ({
         sx={sx}
         autoFocus={autoFocus}
         onClick={onClick}
+        className={className}
       />
     ); // WHEN REQUIRE ICON BUTTON
   if (loadingbtn == true)
@@ -97,6 +99,8 @@ const BasicBtn: FC<button_Component_prpos_types> = ({
   variant,
   title,
   autoFocus,
+  className,
+  sx,
 }) => {
   return (
     <>
@@ -112,6 +116,8 @@ const BasicBtn: FC<button_Component_prpos_types> = ({
         startIcon={startIcon}
         variant={variant}
         autoFocus={autoFocus}
+        sx={sx}
+        className={className}
       >
         {title}
       </Button>
@@ -133,6 +139,7 @@ const LoadingBtn: FC<button_Component_prpos_types> = ({
   variant,
   autoFocus,
   loading,
+  className,
 }) => {
   return (
     <>
@@ -149,6 +156,7 @@ const LoadingBtn: FC<button_Component_prpos_types> = ({
         variant={variant}
         autoFocus={autoFocus}
         loading={loading}
+        className={className}
       />
     </>
   );
@@ -167,6 +175,7 @@ const IconBtn: FC<button_Component_prpos_types> = ({
   sx,
   autoFocus,
   children,
+  className,
 }) => {
   return (
     <IconButton
@@ -178,6 +187,7 @@ const IconBtn: FC<button_Component_prpos_types> = ({
       size={size}
       edge={edge}
       sx={sx}
+      className={className}
       autoFocus={autoFocus}
       onClick={onClick}
     >

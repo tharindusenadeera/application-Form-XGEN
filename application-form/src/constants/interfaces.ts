@@ -21,6 +21,7 @@ export interface button_Component_prpos_types {
   title?: any;
   sx?: any;
   loading?: any;
+  className?: any;
 }
 
 export interface button_component_attributes_types {
@@ -508,4 +509,34 @@ export interface messagebox_component_props_types {
   title?: any;
   message?: any;
   onClose?: any;
+}
+
+export interface employerDetails_component_props_types {
+  native: any;
+}
+
+export interface dependancyTesting_component_props_types {
+  showExample: any;
+  state: any;
+}
+
+export interface personalDetails_title_component_props_types {
+  value: any;
+  onChange: any;
+}
+
+export interface personalDetails_name_component_props_types {
+  initialsInFull: any;
+  lastName: any;
+  initials: any;
+  others: any;
+  setInitialsInFull: any;
+  setlastName: any;
+  setInitials: any;
+  setOthers: any;
+}
+
+export interface personalDetails_address_component_props_types {
+  value: any;
+  onChange: any;
 }

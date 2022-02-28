@@ -1,5 +1,4 @@
 import {
-  Divider,
   FormLabel,
   InputAdornment,
   Paper,
@@ -7,6 +6,7 @@ import {
   Typography,
 } from "@mui/material";
 import { FC, useState } from "react";
+import { devCollapsed, devUnCollapsed } from "../../styles";
 import { ButtonComponent } from "../inputComponents/ButtonComponent";
 import { FormControlComponent } from "../inputComponents/FormControlComponent";
 import { FormLabelComponent } from "../inputComponents/FormLabelComponent";
@@ -38,9 +38,9 @@ export const OnlyOneInput: FC = () => {
 
   return (
     <Paper>
-      <div style={{ height: collapse ? "60px" : "auto", overflow: "hidden" }}>
+      <div style={collapse ? devCollapsed : devUnCollapsed}>
         <Typography variant="h5" p={1} onClick={() => setCollapse(!collapse)}>
-          Accept only ond input
+          Accept only one input
         </Typography>
 
         <br />
