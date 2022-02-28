@@ -7,6 +7,7 @@
     "@date-io/luxon": "^2.13.1",
     "@date-io/moment": "^2.13.1",
     "@emotion/styled": "^11.8.1",
+    "@hookstate/core": "^3.0.13",
     "@material-ui/core": "^4.12.3",
     "@mui/icons-material": "^5.4.2",
     "@mui/lab": "^5.0.0-alpha.69",
