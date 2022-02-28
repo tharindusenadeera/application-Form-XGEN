@@ -1,11 +1,11 @@
-import { FormLabel, Stack } from "@mui/material";
+import { Box, FormLabel, Stack } from "@mui/material";
 import { FC } from "react";
-import { personalDetails_name_component_props_types } from "../../../../constants/interfaces";
-import { FormControlComponent } from "../../../inputComponents/FormControlComponent";
+import { personalDetails_name_component_props_types } from "../../../../../constants/interfaces";
+import { FormControlComponent } from "../../../../inputComponents/FormControlComponent";
 
-import { FormControlLabelComponent } from "../../../inputComponents/FormControlLabelComponent";
-import { FormLabelComponent } from "../../../inputComponents/FormLabelComponent";
-import { TextBoxComponent } from "../../../inputComponents/TextBoxComponent";
+import { FormControlLabelComponent } from "../../../../inputComponents/FormControlLabelComponent";
+import { FormLabelComponent } from "../../../../inputComponents/FormLabelComponent";
+import { TextBoxComponent } from "../../../../inputComponents/TextBoxComponent";
 
 export const Name: FC<personalDetails_name_component_props_types> = ({
   initialsInFull,
@@ -18,7 +18,7 @@ export const Name: FC<personalDetails_name_component_props_types> = ({
   setOthers,
 }) => {
   return (
-    <>
+    <Box mt={2}>
       <Stack direction="row" spacing={2}>
         <FormControlComponent>
           {/* //Initials */}
@@ -29,7 +29,7 @@ export const Name: FC<personalDetails_name_component_props_types> = ({
                 variant="outlined"
                 placeholder="Initials In Full"
                 value={initialsInFull}
-                onChange={(e: any) => initialsInFull(e.target.value)}
+                onChange={(e: any) => setInitialsInFull(e.target.value)}
               />
             }
           />
@@ -80,6 +80,6 @@ export const Name: FC<personalDetails_name_component_props_types> = ({
           />
         </FormControlComponent>
       </Stack>
-    </>
+    </Box>
   );
 };

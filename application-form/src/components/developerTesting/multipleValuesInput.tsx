@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
 import { Divider, Paper, Stack, Typography } from "@mui/material";
 import { FormLabelComponent } from "../inputComponents/FormLabelComponent";
-import { SelectComponents } from "../inputComponents/SelectComponents";
 import { TextBoxComponent } from "../inputComponents/TextBoxComponent";
 import { ButtonComponent } from "../inputComponents/ButtonComponent";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -13,6 +12,7 @@ import {
   devCollapsed,
   devUnCollapsed,
 } from "../../styles";
+import { SelectComponent } from "../inputComponents/SelectComponents";
 
 export const MultipleValuesInput: FC = () => {
   const [values, setValues] = useState([{ type: null, value: "", id: "" }]);
@@ -67,7 +67,7 @@ export const MultipleValuesInput: FC = () => {
         {values.map((item, index) => {
           return (
             <Stack direction="row" spacing={2} m={2}>
-              <SelectComponents
+              <SelectComponent
                 label={item.type}
                 values={[
                   { value: null, name: "None" },

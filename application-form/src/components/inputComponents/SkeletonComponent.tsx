@@ -11,6 +11,7 @@ export const SkeletonComponent: FC<skeleton_component_props_types> = ({
   sx,
   variant,
   width,
+  className,
 }) => {
   return (
     <Skeleton
@@ -22,6 +23,7 @@ export const SkeletonComponent: FC<skeleton_component_props_types> = ({
       sx={sx}
       variant={variant}
       width={width}
+      className={className}
     />
   );
 };

@@ -1,15 +1,13 @@
 import { Stack } from "@mui/material";
 import { FC } from "react";
-import { personalDetails_title_component_props_types } from "../../../../constants/interfaces";
-import { FormLabelComponent } from "../../../inputComponents/FormLabelComponent";
-import { ToggleButtonComponent } from "../../../inputComponents/ToggleButtonComponent";
-import { ToggleButtonGroupComponent } from "../../../inputComponents/ToggleButtonGroupComponent";
-
-import { primaryBtn } from "../../../../styles";
+import { personalDetails_title_component_props_types } from "../../../../../constants/interfaces";
+import { FormLabelComponent } from "../../../../inputComponents/FormLabelComponent";
+import { ToggleButtonComponent } from "../../../../inputComponents/ToggleButtonComponent";
+import { ToggleButtonGroupComponent } from "../../../../inputComponents/ToggleButtonGroupComponent";
 
 export const Title: FC<personalDetails_title_component_props_types> = ({
-  value,
-  onChange,
+  title,
+  setTitle,
 }) => {
   return (
     <>
@@ -19,9 +17,9 @@ export const Title: FC<personalDetails_title_component_props_types> = ({
       {/* //Button set */}
       <Stack direction="row" spacing={2}>
         <ToggleButtonGroupComponent
-          value={value}
+          value={title}
           onChange={(e: any) =>
-            value != e.target.value && onChange(e.target.value)
+            title != e.target.value && setTitle(e.target.value)
           }
         >
           <ToggleButtonComponent children="Mr" value="Mr" />

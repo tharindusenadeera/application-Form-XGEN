@@ -7,7 +7,7 @@ import {
 import { FormControl, InputLabel } from "@mui/material";
 import { FormControlComponent } from "./FormControlComponent";
 
-export const SelectComponents: FC<select_component_props_types> = ({
+export const SelectComponent: FC<select_component_props_types> = ({
   autoWidth,
   children,
   classes,
@@ -34,6 +34,7 @@ export const SelectComponents: FC<select_component_props_types> = ({
   value,
   variant,
   values,
+  className,
 }: any) => {
   return (
     <FormControlComponent>
@@ -65,6 +66,7 @@ export const SelectComponents: FC<select_component_props_types> = ({
         style={sx}
         value={value}
         variant={variant}
+        className={className}
       >
         {values.map((item: any) => (
           <MenuItem value={item.value}>{item.name}</MenuItem>

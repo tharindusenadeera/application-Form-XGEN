@@ -26,6 +26,7 @@ export interface button_Component_prpos_types {
 
 export interface button_component_attributes_types {
   attributes?: any;
+  className?: any;
 }
 
 export interface textbox_component_props_types {
@@ -62,6 +63,7 @@ export interface textbox_component_props_types {
   value?: any;
   variant?: any;
   style?: any;
+  className?: any;
 }
 
 export interface select_component_props_types {
@@ -91,10 +93,12 @@ export interface select_component_props_types {
   value?: any;
   variant?: any;
   values?: any;
+  className?: any;
 }
 
 export interface MenuItem_component_props_types {
   values: any;
+  className?: any;
 }
 
 export interface checkbox_component_props_types {
@@ -116,6 +120,7 @@ export interface checkbox_component_props_types {
   size?: any;
   sx?: any;
   value?: any;
+  className?: any;
 }
 export interface radiobutton_component_props_types {
   checked?: any;
@@ -136,6 +141,7 @@ export interface radiobutton_component_props_types {
   sx?: any;
   value?: any;
   name?: any;
+  className?: any;
 }
 
 export interface checkbox_component_props_types {
@@ -157,6 +163,7 @@ export interface checkbox_component_props_types {
   size?: any;
   sx?: any;
   value?: any;
+  className?: any;
 }
 
 export interface slider_component_props_types {
@@ -188,6 +195,7 @@ export interface slider_component_props_types {
   value?: any;
   valueLabelDisplay?: any;
   valueLabelFormat?: any;
+  className?: any;
 }
 
 export interface formcontrol_component_props_types {
@@ -204,6 +212,7 @@ export interface formcontrol_component_props_types {
   props?: any;
   focused?: any;
   margin?: any;
+  className?: any;
 }
 
 export interface formcontrollabel_component_props_types {
@@ -219,6 +228,7 @@ export interface formcontrollabel_component_props_types {
   sx?: any;
   label?: any;
   value?: any;
+  className?: any;
 }
 
 export interface formlabel_component_props_types {
@@ -233,6 +243,7 @@ export interface formlabel_component_props_types {
   required?: any;
   sx?: any;
   id?: any;
+  className?: any;
 }
 
 export interface radiogroup_component_props_types {
@@ -241,10 +252,12 @@ export interface radiogroup_component_props_types {
   name?: any;
   onChange?: any;
   value?: any;
+  className?: any;
 }
 
 export interface rLocalizationProviderComponent_component_props_types {
   children?: any;
+  className?: any;
 }
 
 export interface TimePickerComponent_component_props_types {
@@ -291,6 +304,7 @@ export interface TimePickerComponent_component_props_types {
   toolbarPlaceholder?: any;
   value?: any;
   label?: any;
+  className?: any;
 }
 
 export interface calander_component_props_types {
@@ -299,7 +313,6 @@ export interface calander_component_props_types {
   acceptRegex?: any;
   allowSameDateSelection?: any;
   cancelText?: any;
-  className?: any;
   clearable?: any;
   clearText?: any;
   components?: any;
@@ -357,6 +370,7 @@ export interface calander_component_props_types {
   views?: any;
   label?: any;
   disableFuture?: any;
+  className?: any;
 }
 
 export interface switchcomponent_component_props_types {
@@ -377,6 +391,7 @@ export interface switchcomponent_component_props_types {
   size?: any;
   sx?: any;
   value?: any;
+  className?: any;
 }
 
 export interface ToggleButtonGroupComponent_component_props_types {
@@ -390,6 +405,7 @@ export interface ToggleButtonGroupComponent_component_props_types {
   size?: any;
   sx?: any;
   value?: any;
+  className?: any;
 }
 
 export interface ToggleButtonComponent_component_props_types {
@@ -405,6 +421,7 @@ export interface ToggleButtonComponent_component_props_types {
   selected?: any;
   size?: any;
   sx?: any;
+  className?: any;
 }
 
 export interface avatar_component_props_types {
@@ -418,6 +435,7 @@ export interface avatar_component_props_types {
   sx?: any;
   src?: any;
   variant?: any;
+  className?: any;
 }
 
 export interface skeleton_component_props_types {
@@ -429,6 +447,7 @@ export interface skeleton_component_props_types {
   sx?: any;
   variant?: any;
   width?: any;
+  className?: any;
 }
 
 export interface circularProgressComponent_component_props_types {
@@ -440,6 +459,7 @@ export interface circularProgressComponent_component_props_types {
   thickness?: any;
   value?: any;
   variant?: any;
+  className?: any;
 }
 
 export interface linearProgressComponent_component_props_types {
@@ -449,6 +469,7 @@ export interface linearProgressComponent_component_props_types {
   value?: any;
   valueBuffer?: any;
   variant?: any;
+  className?: any;
 }
 
 export interface dialog_component_props_types {
@@ -471,6 +492,7 @@ export interface dialog_component_props_types {
   TransitionComponent?: any;
   transitionDuration?: any;
   TransitionProps?: any;
+  className?: any;
 }
 
 export interface dialogaction_component_props_types {
@@ -479,6 +501,7 @@ export interface dialogaction_component_props_types {
   disableSpacing?: any;
   sx?: any;
   onClose?: any;
+  className?: any;
 }
 
 export interface dialogcontent_component_props_types {
@@ -486,6 +509,7 @@ export interface dialogcontent_component_props_types {
   classes?: any;
   dividers?: any;
   sx?: any;
+  className?: any;
 }
 
 export interface dialogcontenttext_component_props_types {
@@ -494,6 +518,7 @@ export interface dialogcontenttext_component_props_types {
   dividers?: any;
   sx?: any;
   id?: any;
+  className?: any;
 }
 
 export interface dialogtitle_component_props_types {
@@ -502,6 +527,7 @@ export interface dialogtitle_component_props_types {
   dividers?: any;
   sx?: any;
   id?: any;
+  className?: any;
 }
 
 export interface messagebox_component_props_types {
@@ -520,9 +546,22 @@ export interface dependancyTesting_component_props_types {
   state: any;
 }
 
+export interface personal_component_props_types {
+  title: any;
+  setTitle: any;
+  initialsInFull: any;
+  lastName: any;
+  initials: any;
+  others: any;
+  setInitialsInFull: any;
+  setlastName: any;
+  setInitials: any;
+  setOthers: any;
+}
+
 export interface personalDetails_title_component_props_types {
-  value: any;
-  onChange: any;
+  title: any;
+  setTitle: any;
 }
 
 export interface personalDetails_name_component_props_types {
@@ -537,6 +576,33 @@ export interface personalDetails_name_component_props_types {
 }
 
 export interface personalDetails_address_component_props_types {
-  value: any;
-  onChange: any;
+  address: any;
+  setAddress: any;
+}
+
+export interface primaryApplicantDetails_component_props_types {
+  title: any;
+  setTitle: any;
+  initialsInFull: any;
+  lastName: any;
+  initials: any;
+  others: any;
+  setInitialsInFull: any;
+  setlastName: any;
+  setInitials: any;
+  setOthers: any;
+  address: any;
+  setAddress: any;
+}
+
+export interface residentialDetails_component_props_types {
+  address: any;
+  setAddress: any;
+}
+
+export interface template_component_props_types {
+  title: any;
+  children: any;
+  Visibility: any;
+  setVisibility: any;
 }

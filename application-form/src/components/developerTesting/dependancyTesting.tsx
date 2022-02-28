@@ -1,9 +1,7 @@
 import { FC, useState } from "react";
 import { FormLabelComponent } from "../inputComponents/FormLabelComponent";
-import { SelectComponents } from "../inputComponents/SelectComponents";
 import { ToggleButtonComponent } from "../inputComponents/ToggleButtonComponent";
 import { FormControlComponent } from "../inputComponents/FormControlComponent";
-
 import { TextBoxComponent } from "../inputComponents/TextBoxComponent";
 import { FormLabel, Paper, Stack, Typography } from "@mui/material";
 import { RadioGropComponent } from "../inputComponents/RadioGropComponent";
@@ -20,6 +18,7 @@ import {
   dependancyTesting_component_props_types,
   employerDetails_component_props_types,
 } from "../../constants/interfaces";
+import { SelectComponent } from "../inputComponents/SelectComponents";
 
 export const DependancyTesting: FC<dependancyTesting_component_props_types> = ({
   showExample,
@@ -74,7 +73,7 @@ export const DependancyTesting: FC<dependancyTesting_component_props_types> = ({
               <FormControlComponent>
                 <FormLabelComponent
                   children={
-                    <SelectComponents
+                    <SelectComponent
                       label="Country"
                       values={[
                         { value: 1, name: "USA" },

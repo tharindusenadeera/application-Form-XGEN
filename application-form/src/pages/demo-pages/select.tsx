@@ -1,4 +1,4 @@
-import { SelectComponents } from "../../components/inputComponents/SelectComponents";
+import { SelectComponent } from "../../components/inputComponents/SelectComponents";
 
 export const Select = () => {
   return (
@@ -7,7 +7,7 @@ export const Select = () => {
         <h3>Selects</h3>
       </td>
       <td>
-        <SelectComponents
+        <SelectComponent
           values={[
             { value: 1, name: "Toyota" },
             { value: 2, name: "Nissan" },
@@ -15,7 +15,7 @@ export const Select = () => {
           sx={{ width: "100px" }}
           label="car"
         />
-        <SelectComponents
+        <SelectComponent
           values={[
             { value: 1, name: "Toyota" },
             { value: 2, name: "Nissan" },
@@ -24,7 +24,7 @@ export const Select = () => {
           label="city"
           variant="outlined"
         />
-        <SelectComponents
+        <SelectComponent
           values={[
             { value: 1, name: "Toyota" },
             { value: 2, name: "Nissan" },

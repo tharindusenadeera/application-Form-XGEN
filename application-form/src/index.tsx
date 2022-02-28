@@ -5,14 +5,14 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import { ComponentDemo } from "./pages/demo-pages/componentDemo";
 import { Dev } from "./pages/dev";
-import { PersonalDetails } from "./components/RDB/SECTIONS/Personal Details/personalDetails";
+import { ApplicationForm } from "./components/RDB/ApplicationForm";
 ReactDOM.render(
   <BrowserRouter>
     <App>
       <Routes>
         <Route path="/demopage" element={<ComponentDemo />} />
         <Route path="/" element={<Dev />} />
-        <Route path="/rdb" element={<PersonalDetails />} />
+        <Route path="/rdb" element={<ApplicationForm />} />
       </Routes>
     </App>
   </BrowserRouter>,

@@ -25,3 +25,27 @@ export const devUnCollapsed = {
   height: "auto",
   overflow: "hidden",
 };
+
+export const templatePannelShow = {
+  border: "1px solid grey",
+  borderRadius: "15px",
+  padding: "10px",
+  height: "auto",
+  overflow: "hidden",
+  background: "#ebebeb",
+  margin: "15px",
+};
+
+export const templatePannelHide = {
+  border: "1px solid grey",
+  borderRadius: "15px",
+  padding: "10px",
+  height: "30px",
+  overflow: "hidden",
+  background: "#ebebeb",
+  margin: "15px",
+};
+
+export const pannelExpandIconBox = {
+  marginLeft: "auto",
+};
