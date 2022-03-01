@@ -10,7 +10,7 @@ import { TextBoxComponent } from "../../../../inputComponents/TextBoxComponent";
 
 export const ResidentialAddress: FC<
   personalDetails_address_component_props_types
-> = ({ address, setAddress }) => {
+> = ({ address, setAddress, province, setProvince }) => {
   return (
     <Stack direction="row" spacing={2}>
       <FormControlComponent>
@@ -32,13 +32,15 @@ export const ResidentialAddress: FC<
       <FormControlComponent>
         <FormLabel>Province</FormLabel>
         <SelectComponent
-          label="Province"
+          label={province}
           values={[
-            { id: 0, name: "Kandy" },
-            { id: 0, name: "Colombo" },
+            { value: "Kandy", name: "Kandy" },
+            { value: "Colombo", name: "Colombo" },
           ]}
           variant="outlined"
           sx={basicSelect}
+          value={province}
+          onChange={(e: any) => setProvince(e.target.value)}
         />
       </FormControlComponent>
     </Stack>

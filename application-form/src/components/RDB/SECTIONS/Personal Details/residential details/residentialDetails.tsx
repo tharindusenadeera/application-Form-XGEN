@@ -6,11 +6,16 @@ import { ResidentialAddress } from "./residentialAddress";
 
 export const ResidentialDetails: FC<
   residentialDetails_component_props_types
-> = ({ address, setAddress }) => {
+> = ({ address, setAddress, province, setProvince }) => {
   return (
     <Paper>
       <Box p={2}>
-        <ResidentialAddress address={address} setAddress={setAddress} />
+        <ResidentialAddress
+          address={address}
+          setAddress={setAddress}
+          province={province}
+          setProvince={setProvince}
+        />
       </Box>
     </Paper>
   );

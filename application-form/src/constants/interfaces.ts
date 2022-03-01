@@ -24,10 +24,10 @@ export interface button_Component_prpos_types {
   className?: any;
 }
 
-export interface button_component_attributes_types {
-  attributes?: any;
-  className?: any;
-}
+// export interface button_component_attributes_types {
+//   attributes?: any;
+//   className?: any;
+// }
 
 export interface textbox_component_props_types {
   autoComplete?: any;
@@ -578,6 +578,8 @@ export interface personalDetails_name_component_props_types {
 export interface personalDetails_address_component_props_types {
   address: any;
   setAddress: any;
+  province: any;
+  setProvince: any;
 }
 
 export interface primaryApplicantDetails_component_props_types {
@@ -593,11 +595,15 @@ export interface primaryApplicantDetails_component_props_types {
   setOthers: any;
   address: any;
   setAddress: any;
+  province: any;
+  setProvince: any;
 }
 
 export interface residentialDetails_component_props_types {
   address: any;
   setAddress: any;
+  province: any;
+  setProvince: any;
 }
 
 export interface template_component_props_types {

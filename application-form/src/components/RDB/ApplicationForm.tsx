@@ -8,6 +8,7 @@ import { CustomerContactDetails } from "./SECTIONS/contact details/contactDetail
 import { Stack } from "@mui/material";
 import { ButtonComponent } from "../inputComponents/ButtonComponent";
 import { AdditionalDetails } from "./SECTIONS/additional details/additionalDetails";
+import { saveData, saveDraft } from "../../services/commanApi";
 
 export const ApplicationForm: FC = () => {
   //Personla details state
@@ -17,6 +18,7 @@ export const ApplicationForm: FC = () => {
   const [initials, setInitials] = useState("");
   const [others, setOthers] = useState("");
   const [address, setAddress] = useState("");
+  const [province, setProvince] = useState(null);
 
   //Customer contact details state
   const [customerContacValues, setCustomerContacValues] = useState([
@@ -63,7 +65,26 @@ export const ApplicationForm: FC = () => {
   const [additionalShow, setAdditionalShow] = useState(false);
   const onAdditionalClose = (value: any) => setAdditionalShow(value);
 
-  // onSubmit = () =>
+  const data = {
+    title,
+    initialsInFull,
+    lastName,
+    initials,
+    others,
+    address,
+    customerContacValues,
+    fixedTpNumber,
+    whatsApp,
+    email,
+    employeed,
+    salary,
+    province,
+  };
+
+  //api calls
+  const onSubmit = () => saveData(data);
+  const onDraft = () => saveDraft(data);
+
   return (
     <>
       {/* //Personnal data */}
@@ -91,6 +112,8 @@ export const ApplicationForm: FC = () => {
           setOthers={setOthers}
           address={address}
           setAddress={setAddress}
+          province={province}
+          setProvince={setProvince}
         />
       </Template>
 
@@ -142,9 +165,18 @@ export const ApplicationForm: FC = () => {
         />
       </Template>
 
+      {/* //Navigation Buttons */}
       <Stack direction="row" spacing={2} justifyContent="end" p={2}>
-        <ButtonComponent title="Save As Draft" variant="outlined" />
-        <ButtonComponent title="SUBMIT" variant="contained" />
+        <ButtonComponent
+          title="Save As Draft"
+          variant="outlined"
+          onClick={onDraft}
+        />
+        <ButtonComponent
+          title="SUBMIT"
+          variant="contained"
+          onClick={onSubmit}
+        />
       </Stack>
     </>
   );

@@ -41,7 +41,7 @@ export const IncomdeDetails: FC<incomeDetails_component_props_types> = ({
               <FormLabelComponent>Salary</FormLabelComponent>
               <TextBoxComponent
                 value={salary}
-                onChange={(e: any) => setEmployeed(e.target.value)}
+                onChange={(e: any) => setSalary(e.target.value)}
                 variant="outlined"
               />
             </FormControlComponent>

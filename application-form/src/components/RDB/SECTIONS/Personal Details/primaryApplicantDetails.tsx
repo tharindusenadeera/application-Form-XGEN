@@ -4,9 +4,6 @@ import { Box } from "@mui/system";
 import { primaryApplicantDetails_component_props_types } from "../../../../constants/interfaces";
 import { PersonalDetails } from "./personal details/personalDetails";
 import { ResidentialDetails } from "./residential details/residentialDetails";
-import { ButtonComponent } from "../../../inputComponents/ButtonComponent";
-import { navigationButton } from "../../../../styles";
-import { NavigationButton } from "../../../navigationButton/navigationButton";
 
 export const PrimaryApplicantDetails: FC<
   primaryApplicantDetails_component_props_types
@@ -23,6 +20,8 @@ export const PrimaryApplicantDetails: FC<
   setOthers,
   address,
   setAddress,
+  province,
+  setProvince,
 }) => {
   return (
     <>
@@ -45,7 +44,12 @@ export const PrimaryApplicantDetails: FC<
         </Box>
         <Typography variant="h6">Residential Details</Typography>
         <Box p={3}>
-          <ResidentialDetails address={address} setAddress={setAddress} />
+          <ResidentialDetails
+            address={address}
+            setAddress={setAddress}
+            province={province}
+            setProvince={setProvince}
+          />
         </Box>
       </Box>
     </>
