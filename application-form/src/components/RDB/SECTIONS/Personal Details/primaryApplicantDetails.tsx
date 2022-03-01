@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-
 import { primaryApplicantDetails_component_props_types } from "../../../../constants/interfaces";
 import { PersonalDetails } from "./personal details/personalDetails";
 import { ResidentialDetails } from "./residential details/residentialDetails";

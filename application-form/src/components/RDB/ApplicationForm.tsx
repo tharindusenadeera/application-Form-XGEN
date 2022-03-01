@@ -2,6 +2,10 @@ import { FC, useState } from "react";
 import { PrimaryApplicantDetails } from "./SECTIONS/Personal Details/primaryApplicantDetails";
 import { Template } from "./SECTIONS/template";
 
+//utilities
+import { v4 as uuidv4 } from "uuid";
+import { CustomerContactDetails } from "./SECTIONS/contact details/contactDetails";
+
 export const ApplicationForm: FC = () => {
   //Personla details state
   const [title, setTitle] = useState("");
@@ -10,6 +14,38 @@ export const ApplicationForm: FC = () => {
   const [initials, setInitials] = useState("");
   const [others, setOthers] = useState("");
   const [address, setAddress] = useState("");
+
+  //Customer contact details
+  const [customerContacValues, setCustomerContacValues] = useState([
+    { type: null, value: "", id: "" },
+  ]);
+  const [fixedTpNumber, setFixedTpNumber] = useState("");
+
+  const onCustomerContacValuesChange = (value: any, type: any, id: any) => {
+    let filterd = customerContacValues.map((item) => {
+      if (item.id == id) {
+        return { type: type, value: value, id: id };
+      }
+      return item;
+    });
+
+    setCustomerContacValues(filterd);
+  };
+  const onNewCustomerContactFieldAdding = () => {
+    const newId = uuidv4();
+    setCustomerContacValues((curruntValues) => [
+      ...curruntValues,
+      { type: null, value: "", id: newId },
+    ]);
+  };
+  const onCustomerContactFieldDelete = (id: any) => {
+    setCustomerContacValues(() =>
+      customerContacValues.filter((item) => item.id != id)
+    );
+  };
+
+  const onCustomerContactFieldReset = () =>
+    setCustomerContacValues([{ type: null, value: "", id: "" }]);
 
   //pannel collapsive state
   const [personalShow, setPersonalShow] = useState(false);
@@ -48,19 +84,14 @@ export const ApplicationForm: FC = () => {
         Visibility={contactShow}
         setVisibility={onConactlClose}
       >
-        <PrimaryApplicantDetails
-          title={title}
-          setTitle={setTitle}
-          setInitialsInFull={setInitialsInFull}
-          initialsInFull={initialsInFull}
-          lastName={lastName}
-          setlastName={setlastName}
-          initials={initials}
-          setInitials={setInitials}
-          others={others}
-          setOthers={setOthers}
-          address={address}
-          setAddress={setAddress}
+        <CustomerContactDetails
+          customerContacValues={customerContacValues}
+          onCustomerContacValuesChange={onCustomerContacValuesChange}
+          onNewCustomerContactFieldAdding={onNewCustomerContactFieldAdding}
+          onCustomerContactFieldDelete={onCustomerContactFieldDelete}
+          onCustomerContactFieldReset={onCustomerContactFieldReset}
+          fixedTpNumber={fixedTpNumber}
+          setFixedTpNumber={setFixedTpNumber}
         />
       </Template>
 

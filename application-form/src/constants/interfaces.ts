@@ -606,3 +606,31 @@ export interface template_component_props_types {
   Visibility: any;
   setVisibility: any;
 }
+
+export interface multipleInputFields_component_props_types {
+  label: any;
+  values: any;
+  onNewValueAdding: any;
+  onValuesReset: any;
+  children: any;
+}
+
+export interface customerContactDetails_component_props_types {
+  customerContacValues: any;
+  onCustomerContacValuesChange: any;
+  onNewCustomerContactFieldAdding: any;
+  onCustomerContactFieldDelete: any;
+  onCustomerContactFieldReset: any;
+  fixedTpNumber: any;
+  setFixedTpNumber: any;
+}
+
+export interface contactDetails_component_props_types {
+  customerContacValues: any;
+  onCustomerContacValuesChange: any;
+  onNewCustomerContactFieldAdding: any;
+  onCustomerContactFieldDelete: any;
+  onCustomerContactFieldReset: any;
+  fixedTpNumber: any;
+  setFixedTpNumber: any;
+}
