@@ -9,15 +9,21 @@ import {
   templatePannelHide,
   templatePannelShow,
 } from "../../../styles";
+import { NavigationButton } from "../../navigationButton/navigationButton";
 
 export const Template: FC<template_component_props_types> = ({
   title,
   children,
   Visibility,
   setVisibility,
+  onBack,
+  onNext,
+  noNext,
+  noBack,
+  ref,
 }) => {
   return (
-    <div style={Visibility ? templatePannelShow : templatePannelHide}>
+    <div style={Visibility ? templatePannelShow : templatePannelHide} ref={ref}>
       <Box display="flex" alignItems="center">
         <Box>
           <Typography variant="h5">{title}</Typography>
@@ -31,6 +37,13 @@ export const Template: FC<template_component_props_types> = ({
         </Box>
       </Box>
       <Box>{children}</Box>
+      <Box m={2}>
+        {noNext && <NavigationButton onBack={onBack} noNext />}
+        {noBack && <NavigationButton onNext={onNext} noBack />}
+        {!noBack && !noNext && (
+          <NavigationButton onNext={onNext} onBack={onBack} />
+        )}
+      </Box>
     </div>
   );
 };

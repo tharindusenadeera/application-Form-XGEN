@@ -49,3 +49,6 @@ export const templatePannelHide = {
 export const pannelExpandIconBox = {
   marginLeft: "auto",
 };
+export const navigationButton = {
+  marginLeft: "auto",
+};

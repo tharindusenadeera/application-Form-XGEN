@@ -4,6 +4,9 @@ import { Box } from "@mui/system";
 import { primaryApplicantDetails_component_props_types } from "../../../../constants/interfaces";
 import { PersonalDetails } from "./personal details/personalDetails";
 import { ResidentialDetails } from "./residential details/residentialDetails";
+import { ButtonComponent } from "../../../inputComponents/ButtonComponent";
+import { navigationButton } from "../../../../styles";
+import { NavigationButton } from "../../../navigationButton/navigationButton";
 
 export const PrimaryApplicantDetails: FC<
   primaryApplicantDetails_component_props_types

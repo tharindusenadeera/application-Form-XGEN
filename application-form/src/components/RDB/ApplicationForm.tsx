@@ -5,6 +5,9 @@ import { Template } from "./SECTIONS/template";
 //utilities
 import { v4 as uuidv4 } from "uuid";
 import { CustomerContactDetails } from "./SECTIONS/contact details/contactDetails";
+import { Stack } from "@mui/material";
+import { ButtonComponent } from "../inputComponents/ButtonComponent";
+import { AdditionalDetails } from "./SECTIONS/additional details/additionalDetails";
 
 export const ApplicationForm: FC = () => {
   //Personla details state
@@ -15,11 +18,13 @@ export const ApplicationForm: FC = () => {
   const [others, setOthers] = useState("");
   const [address, setAddress] = useState("");
 
-  //Customer contact details
+  //Customer contact details state
   const [customerContacValues, setCustomerContacValues] = useState([
     { type: null, value: "", id: "" },
   ]);
   const [fixedTpNumber, setFixedTpNumber] = useState("");
+  const [whatsApp, setWhatsapp] = useState("");
+  const [email, setEmail] = useState("");
 
   const onCustomerContacValuesChange = (value: any, type: any, id: any) => {
     let filterd = customerContacValues.map((item) => {
@@ -43,9 +48,12 @@ export const ApplicationForm: FC = () => {
       customerContacValues.filter((item) => item.id != id)
     );
   };
-
   const onCustomerContactFieldReset = () =>
     setCustomerContacValues([{ type: null, value: "", id: "" }]);
+
+  //Additional detailsstate
+  const [employeed, setEmployeed] = useState(true);
+  const [salary, setSalary] = useState("");
 
   //pannel collapsive state
   const [personalShow, setPersonalShow] = useState(false);
@@ -54,6 +62,8 @@ export const ApplicationForm: FC = () => {
   const onConactlClose = (value: any) => setContactShow(value);
   const [additionalShow, setAdditionalShow] = useState(false);
   const onAdditionalClose = (value: any) => setAdditionalShow(value);
+
+  // onSubmit = () =>
   return (
     <>
       {/* //Personnal data */}
@@ -61,6 +71,12 @@ export const ApplicationForm: FC = () => {
         title="1. Personal Details"
         Visibility={personalShow}
         setVisibility={onPannelClose}
+        noBack
+        onNext={() => {
+          setPersonalShow(false);
+          setContactShow(true);
+          window.scrollTo(0, 1000);
+        }}
       >
         <PrimaryApplicantDetails
           title={title}
@@ -83,6 +99,14 @@ export const ApplicationForm: FC = () => {
         title="2. Contact Details"
         Visibility={contactShow}
         setVisibility={onConactlClose}
+        onNext={() => {
+          setContactShow(false);
+          setAdditionalShow(true);
+        }}
+        onBack={() => {
+          setContactShow(false);
+          setPersonalShow(true);
+        }}
       >
         <CustomerContactDetails
           customerContacValues={customerContacValues}
@@ -92,6 +116,10 @@ export const ApplicationForm: FC = () => {
           onCustomerContactFieldReset={onCustomerContactFieldReset}
           fixedTpNumber={fixedTpNumber}
           setFixedTpNumber={setFixedTpNumber}
+          email={email}
+          setEmail={setEmail}
+          whatsApp={whatsApp}
+          setWhatsApp={setWhatsapp}
         />
       </Template>
 
@@ -100,22 +128,24 @@ export const ApplicationForm: FC = () => {
         title="3. Additional Details"
         Visibility={additionalShow}
         setVisibility={onAdditionalClose}
+        noNext
+        onBack={() => {
+          setAdditionalShow(false);
+          setContactShow(true);
+        }}
       >
-        <PrimaryApplicantDetails
-          title={title}
-          setTitle={setTitle}
-          setInitialsInFull={setInitialsInFull}
-          initialsInFull={initialsInFull}
-          lastName={lastName}
-          setlastName={setlastName}
-          initials={initials}
-          setInitials={setInitials}
-          others={others}
-          setOthers={setOthers}
-          address={address}
-          setAddress={setAddress}
+        <AdditionalDetails
+          employeed={employeed}
+          setEmployeed={setEmployeed}
+          salary={salary}
+          setSalary={setSalary}
         />
       </Template>
+
+      <Stack direction="row" spacing={2} justifyContent="end" p={2}>
+        <ButtonComponent title="Save As Draft" variant="outlined" />
+        <ButtonComponent title="SUBMIT" variant="contained" />
+      </Stack>
     </>
   );
 };

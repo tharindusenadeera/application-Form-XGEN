@@ -605,6 +605,11 @@ export interface template_component_props_types {
   children: any;
   Visibility: any;
   setVisibility: any;
+  onBack?: any;
+  onNext?: any;
+  noNext?: any;
+  noBack?: any;
+  ref?: any;
 }
 
 export interface multipleInputFields_component_props_types {
@@ -625,6 +630,13 @@ export interface customerContactDetails_component_props_types {
   setFixedTpNumber: any;
 }
 
+export interface socialContact_component_props_types {
+  email: any;
+  setEmail: any;
+  whatsApp: any;
+  setWhatsApp: any;
+}
+
 export interface contactDetails_component_props_types {
   customerContacValues: any;
   onCustomerContacValuesChange: any;
@@ -633,4 +645,34 @@ export interface contactDetails_component_props_types {
   onCustomerContactFieldReset: any;
   fixedTpNumber: any;
   setFixedTpNumber: any;
+  email: any;
+  setEmail: any;
+  whatsApp: any;
+  setWhatsApp: any;
+}
+
+export interface navigationButton_component_props_types {
+  onBack?: any;
+  onNext?: any;
+  noNext?: any;
+  noBack?: any;
+}
+
+export interface additionalDetails_component_props_types {
+  employeed: any;
+  salary: any;
+}
+
+export interface incomeDetails_component_props_types {
+  employeed: any;
+  salary: any;
+  setEmployeed: any;
+  setSalary: any;
+}
+
+export interface additionalDetails_component_props_types {
+  employeed: any;
+  salary: any;
+  setEmployeed: any;
+  setSalary: any;
 }
