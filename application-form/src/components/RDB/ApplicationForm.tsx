@@ -9,6 +9,8 @@ import { Stack } from "@mui/material";
 import { ButtonComponent } from "../inputComponents/ButtonComponent";
 import { AdditionalDetails } from "./SECTIONS/additional details/additionalDetails";
 import { saveData, saveDraft } from "../../services/commanApi";
+import { PrimaryApplicantDetailsExtended } from "./SECTIONS/Personal Details/primaryApplicantDetailsExtended";
+import { primaryApplicantDetails_component_props_types } from "../../constants/interfaces";
 
 export const ApplicationForm: FC = () => {
   //Personla details state
@@ -65,6 +67,10 @@ export const ApplicationForm: FC = () => {
   const [additionalShow, setAdditionalShow] = useState(false);
   const onAdditionalClose = (value: any) => setAdditionalShow(value);
 
+  //test
+  const [fname, setfname] = useState(null);
+  const [lname, setlname] = useState(null);
+
   const data = {
     title,
     initialsInFull,
@@ -99,7 +105,21 @@ export const ApplicationForm: FC = () => {
           window.scrollTo(0, 1000);
         }}
       >
-        <PrimaryApplicantDetails
+        {/* //[{value:null,key:'firstName',label:'First Name'},{value:null,key:'lastName',label:'Last Name'}] */}
+
+        <PrimaryApplicantDetailsExtended
+          payload={[
+            { value: null, key: "firstName", label: "First Name" },
+            { value: null, key: "lastName", label: "Last Name" },
+          ]}
+          onChange={(payload: any) => {
+            let dataSet: primaryApplicantDetails_component_props_types =
+              payload as primaryApplicantDetails_component_props_types;
+            console.log("dataSet => ", dataSet);
+          }}
+        />
+
+        {/* <PrimaryApplicantDetails
           title={title}
           setTitle={setTitle}
           setInitialsInFull={setInitialsInFull}
@@ -114,7 +134,7 @@ export const ApplicationForm: FC = () => {
           setAddress={setAddress}
           province={province}
           setProvince={setProvince}
-        />
+        /> */}
       </Template>
 
       {/* //Contact details */}

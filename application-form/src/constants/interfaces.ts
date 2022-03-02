@@ -682,3 +682,8 @@ export interface additionalDetails_component_props_types {
   setEmployeed: any;
   setSalary: any;
 }
+
+export interface FieldInvoker {
+  payload: any;
+  onChange: any;
+}
